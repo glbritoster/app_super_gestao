@@ -17,6 +17,9 @@ Route::get('/', 'PrincipalController@principal');
 Route::get('/sobre-nos', 'SobreNosController@sobreNos');
 Route::get('/contato', 'ContatoController@contato');
 
+Route::get('/contato/{nome}', function(string $nome){
+    echo 'Estamos aqui: '.$nome;
+});
 /*
 Route::get('/sobre-nos', function () {
     return 'Sobre nós';
